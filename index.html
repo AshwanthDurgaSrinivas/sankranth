@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sankranthi Sambaraalu | Konaseema Pongal Village Experience</title>
+    <link rel="icon" type="image/png" href="image.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Celebrate Sankranthi & Pongal in the lush coconut villages of Konaseema. Authentic village experiences, traditional food, games and more – perfect for city employees and corporate teams.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Baloo+Bhaina+2:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #f97316;   /* bright orange */
+            --primary-dark: #b91c1c; /* deep maroon/red */
+            --accent: #facc15;   /* yellow */
+            --bg-cream: #fff7e6;
+            --text-dark: #1f2933;
+            --text-muted: #6b7280;
+            --card-bg: #ffffff;
+            --border-soft: rgba(255, 255, 255, 0.6);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: radial-gradient(circle at top, #fff7e6 0%, #fff 40%, #fffaf0 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Navbar */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(to right, rgba(185, 28, 28, 0.95), rgba(249, 115, 22, 0.95));
+            backdrop-filter: blur(10px);
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 999px;
+            background: radial-gradient(circle at 30% 20%, #facc15, #f97316 45%, #b91c1c 90%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+            animation: potFloat 3.2s ease-in-out infinite;
+        }
+
+        .nav-logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .nav-logo-text span:first-child {
+            font-family: "Baloo Bhaina 2", cursive;
+            font-size: 1.25rem;
+        }
+
+        .nav-logo-text span:last-child {
+            font-size: 0.75rem;
+            opacity: 0.9;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, #facc15, #f97316);
+            transition: width 0.25s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f97316, #facc15);
+            color: #7c2d12;
+            padding: 0.6rem 1.1rem;
+            border-radius: 999px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.35);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, translate 0.15s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(217, 119, 6, 0.4);
+        }
+
+        .btn-outline {
+            padding: 0.6rem 1.1rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.75);
+            color: #fee2e2;
+            background: #f96a16f0;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.18);
+            transform: translateY(-1px);
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: #fee2e2;
+            margin: 4px 0;
+            border-radius: 999px;
+        }
+
+        /* Hero */
+
+        main {
+            padding-top: 70px;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            padding: 3rem 1.5rem 2rem;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.4rem;
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(254, 249, 195, 0.95);
+            color: #92400e;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px dashed rgba(248, 113, 22, 0.6);
+        }
+
+        .hero-title {
+            font-family: "Baloo Bhaina 2", cursive;
+            font-size: 2.4rem;
+            line-height: 1.1;
+            color: #7f1d1d;
+        }
+
+        .hero-title span.highlight {
+            background: linear-gradient(135deg, #f97316, #facc15);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 0.98rem;
+            color: var(--text-muted);
+            max-width: 30rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .hero-meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(255,255,255,0.85);
+            padding: 0.45rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(248, 113, 22, 0.35);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .hero-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-card {
+            width: 100%;
+            max-width: 360px;
+            background: radial-gradient(circle at top left, #fef9c3, #f97316 40%, #7f1d1d 100%);
+            border-radius: 2rem;
+            padding: 1.4rem 1.2rem 1.2rem;
+            color: #fff7ed;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(127,29,29,0.6);
+        }
+
+        .hero-card::before {
+            content: "";
+            position: absolute;
+            width: 220%;
+            height: 220%;
+            background-image: radial-gradient(circle, rgba(250, 250, 250, 0.2) 1px, transparent 1px);
+            background-size: 22px 22px;
+            opacity: 0.17;
+            top: -60%;
+            left: -60%;
+            transform: rotate(8deg);
+        }
+
+        .hero-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-card-title {
+            font-family: "Baloo Bhaina 2", cursive;
+            font-size: 1.2rem;
+        }
+
+        .hero-pot {
+            width: 80px;
+            height: 80px;
+            border-radius: 50% 50% 45% 45%;
+            background: radial-gradient(circle at 30% 20%, #fef9c3, #f97316 50%, #7f1d1d 100%);
+            border: 3px solid rgba(252, 211, 77, 0.9);
+            position: relative;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+            animation: potFloat 3s ease-in-out infinite;
+        }
+
+        .hero-pot::before {
+            content: "";
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 52px;
+            height: 26px;
+            border-radius: 999px 999px 0 0;
+            background: linear-gradient(to right, #fef3c7, #fed7aa);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .hero-pot::after {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 38px;
+            height: 20px;
+            border-radius: 999px;
+            border: 3px dashed rgba(252, 211, 77, 0.9);
+        }
+
+        .hero-steam {
+            position: absolute;
+            top: -32px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 6px;
+        }
+
+        .hero-steam span {
+            width: 6px;
+            height: 22px;
+            border-radius: 999px;
+            background: linear-gradient(to top, rgba(254, 243, 199, 0.9), rgba(255,255,255,0));
+            animation: steamRise 2.6s ease-in-out infinite;
+        }
+
+        .hero-steam span:nth-child(2) {
+            animation-delay: 0.28s;
+        }
+
+        .hero-steam span:nth-child(3) {
+            animation-delay: 0.55s;
+        }
+
+        .hero-card-body {
+            position: relative;
+            z-index: 1;
+            font-size: 0.85rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero-card-tag {
+            padding: 0.2rem 0.5rem;
+            border-radius: 999px;
+            background: rgba(24, 24, 27, 0.35);
+            border: 1px solid rgba(252, 211, 77, 0.55);
+            font-size: 0.7rem;
+        }
+
+        .hero-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            padding-top: 0.4rem;
+            border-top: 1px solid rgba(254, 202, 202, 0.4);
+        }
+
+        .floating-kite {
+            position: absolute;
+            right: -30px;
+            top: -16px;
+            width: 80px;
+            height: 80px;
+            transform: rotate(15deg);
+            border-radius: 20%;
+            border: 3px solid rgba(252, 211, 77, 0.65);
+            background: conic-gradient(from 130deg, #facc15, #fb923c, #dc2626, #f97316, #facc15);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+            animation: kiteDrift 5s ease-in-out infinite;
+        }
+
+        .floating-kite::after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 2px;
+            background: rgba(254, 249, 195, 0.7);
+            left: -55px;
+            top: 40px;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 3.5rem 1.5rem 0;
+        }
+
+        .section-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-heading h2 {
+            font-family: "Baloo Bhaina 2", cursive;
+            font-size: 1.7rem;
+            color: #7f1d1d;
+        }
+
+        .section-heading p {
+            font-size: 0.94rem;
+            color: var(--text-muted);
+            max-width: 34rem;
+            margin: 0.4rem auto 0;
+        }
+
+        /* Why Konaseema */
+
+        .grid-why {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1.2rem;
+        }
+
+        .why-card {
+            background: var(--card-bg);
+            border-radius: 1.3rem;
+            padding: 1rem;
+            border: 1px solid rgba(248, 113, 22, 0.18);
+            box-shadow: 0 10px 25px rgba(248, 113, 22, 0.12);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(254, 243, 199, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .why-card h3 {
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+            color: #7f1d1d;
+        }
+
+        .why-card p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .why-label-chip {
+            position: absolute;
+            right: 0.8rem;
+            top: 0.8rem;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 999px;
+            background: rgba(248, 113, 22, 0.07);
+            border: 1px dashed rgba(248, 113, 22, 0.7);
+            color: #b45309;
+        }
+
+        /* Itinerary */
+
+        .itinerary-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .itinerary-card {
+            background: var(--card-bg);
+            border-radius: 1.5rem;
+            padding: 1.4rem 1.2rem;
+            box-shadow: 0 12px 35px rgba(107, 114, 128, 0.18);
+            border: 1px solid rgba(248, 113, 22, 0.1);
+        }
+
+        .itinerary-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            background: rgba(248, 250, 252, 0.9);
+            border: 1px dashed rgba(248, 113, 22, 0.7);
+            font-size: 0.75rem;
+            margin-bottom: 0.65rem;
+        }
+
+        .itinerary-steps {
+            list-style: none;
+            margin-top: 0.3rem;
+        }
+
+        .itinerary-steps li {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.6rem 0.8rem;
+            margin-bottom: 0.6rem;
+            align-items: flex-start;
+        }
+
+        .itinerary-step-time {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #7c2d12;
+            padding: 0.2rem 0.55rem;
+            border-radius: 999px;
+            background: rgba(254, 249, 195, 0.9);
+        }
+
+        .itinerary-step-body span {
+            display: block;
+            font-size: 0.86rem;
+            font-weight: 600;
+        }
+
+        .itinerary-step-body small {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .itinerary-note {
+            margin-top: 0.8rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .itinerary-highlight {
+            background: linear-gradient(to right, rgba(254, 249, 195, 0.9), rgba(254, 243, 199, 0.2));
+            border-radius: 1.25rem;
+            padding: 1rem 1rem;
+            border: 1px dashed rgba(248, 113, 22, 0.7);
+            font-size: 0.85rem;
+        }
+
+        /* Packages */
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.4rem;
+        }
+
+        .package-card {
+            background: var(--card-bg);
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.1rem;
+            border: 1px solid rgba(248, 113, 22, 0.18);
+            box-shadow: 0 12px 28px rgba(248, 113, 22, 0.16);
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-badge {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.6rem;
+            background: rgba(24, 24, 27, 0.85);
+            color: #fef9c3;
+            border-radius: 999px;
+        }
+
+        .package-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #7f1d1d;
+        }
+
+        .package-meta {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .package-price {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #7c2d12;
+        }
+
+        .package-price span {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .package-list {
+            list-style: none;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .package-list li {
+            display: flex;
+            gap: 0.4rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .package-list li::before {
+            content: "•";
+            color: #f97316;
+            margin-top: 1px;
+        }
+
+        .package-footer {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.75rem;
+        }
+
+        .btn-package {
+            margin-top: 0.4rem;
+            font-size: 0.8rem;
+            padding: 0.45rem 0.85rem;
+        }
+
+        /* Corporate Section */
+
+        .corporate-callout {
+            margin-top: 2.8rem;
+            background: linear-gradient(135deg, rgba(185, 28, 28, 0.96), rgba(249, 115, 22, 0.96));
+            border-radius: 1.7rem;
+            padding: 1.4rem 1.4rem;
+            color: #fef9c3;
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .corporate-callout h3 {
+            font-family: "Baloo Bhaina 2", cursive;
+            margin-bottom: 0.3rem;
+        }
+
+        .corporate-callout p {
+            font-size: 0.86rem;
+            opacity: 0.95;
+        }
+
+        .corporate-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.6rem;
+        }
+
+        .corporate-tag {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            background: rgba(30, 64, 175, 0.18);
+            border: 1px solid rgba(254, 249, 195, 0.7);
+        }
+
+        .corporate-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            font-size: 0.9rem;
+            justify-content: flex-end;
+        }
+
+        .corporate-stat strong {
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        .corporate-note {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            margin-top: 0.4rem;
+        }
+
+        /* Gallery */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.8rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(248, 250, 252, 1), rgba(254, 243, 199, 0.8));
+            min-height: 110px;
+            display: flex;
+            align-items: flex-end;
+            padding: 0.6rem;
+        }
+
+        .gallery-label {
+            background: rgba(0,0,0,0.55);
+            color: #fef9c3;
+            padding: 0.25rem 0.5rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+        }
+
+        /* FAQ */
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.2fr);
+            gap: 1.8rem;
+            align-items: flex-start;
+        }
+
+        .faq-intro p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        details {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 0.7rem 0.9rem;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            font-size: 0.86rem;
+        }
+
+        details + details {
+            margin-top: 0.6rem;
+        }
+
+        summary {
+            list-style: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: #7f1d1d;
+        }
+
+        summary::marker,
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary span {
+            font-size: 0.9rem;
+        }
+
+        details[open] summary {
+            color: #b91c1c;
+        }
+
+        details .answer {
+            margin-top: 0.35rem;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* Contact / Footer */
+
+        .contact-section {
+            padding-bottom: 3rem;
+        }
+
+        .contact-wrap {
+            background: var(--card-bg);
+            border-radius: 1.7rem;
+            padding: 1.5rem 1.2rem;
+            border: 1px solid rgba(248, 113, 22, 0.2);
+            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.18);
+            display: grid;
+            grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+            gap: 1.3rem;
+        }
+
+        .contact-chip {
+            font-size: 0.78rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            background: rgba(254, 243, 199, 0.9);
+            border: 1px dashed rgba(248, 113, 22, 0.7);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-bottom: 0.55rem;
+        }
+
+        .contact-wrap h3 {
+            font-family: "Baloo Bhaina 2", cursive;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-wrap p {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+        }
+
+        .contact-items {
+            font-size: 0.84rem;
+            margin-top: 0.8rem;
+        }
+
+        .contact-items div {
+            margin-bottom: 0.35rem;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            padding: 1.5rem 1rem 2rem;
+        }
+
+        /* Animations */
+
+        @keyframes potFloat {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes steamRise {
+            0% { opacity: 0; transform: translateY(10px); }
+            30% { opacity: 1; transform: translateY(0); }
+            70% { opacity: 1; transform: translateY(-10px); }
+            100% { opacity: 0; transform: translateY(-18px); }
+        }
+
+        @keyframes kiteDrift {
+            0% { transform: translateY(0) translateX(0) rotate(13deg); }
+            50% { transform: translateY(-10px) translateX(-6px) rotate(18deg); }
+            100% { transform: translateY(0) translateX(0) rotate(13deg); }
+        }
+
+        /* WhatsApp floating button */
+
+        .wa-float {
+            position: fixed;
+            right: 16px;
+            bottom: 16px;
+            z-index: 60;
+        }
+
+        .wa-float a {
+            width: 54px;
+            height: 54px;
+            border-radius: 999px;
+            background: #22c55e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(22, 163, 74, 0.5);
+            color: #e5ffe9;
+            font-size: 1.8rem;
+            border: 2px solid #bbf7d0;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .wa-float a:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 16px 32px rgba(22, 163, 74, 0.6);
+        }
+
+        /* Responsive */
+
+        @media (max-width: 960px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: left;
+            }
+
+            .hero-right {
+                order: -1;
+            }
+
+            .grid-why {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .packages-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .itinerary-grid,
+            .faq-grid,
+            .contact-wrap,
+            .corporate-callout {
+                grid-template-columns: 1fr;
+            }
+
+            .corporate-stats {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .navbar {
+                padding-inline: 1rem;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                right: 1rem;
+                background: rgba(24, 24, 27, 0.98);
+                border-radius: 1rem;
+                padding: 0.8rem 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.6rem;
+                min-width: 190px;
+                transform-origin: top right;
+                transform: scale(0.9);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.16s ease, transform 0.16s ease;
+            }
+
+            .nav-links.show {
+                opacity: 1;
+                transform: scale(1);
+                pointer-events: auto;
+            }
+
+            .btn-outline {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding-top: 2.2rem;
+            }
+
+            .grid-why {
+                grid-template-columns: 1fr;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            section {
+                padding-inline: 1rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="">
+        <a href="https://wa.me/7382752077?text=Hi%2C%20I%20am%20interested%20in%20Sankranthi%20Sambaraalu%20Konaseema%20tour." target="_blank" aria-label="Chat on WhatsApp">
+            <span class="bi bi-whatsapp"></span>
+        </a>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-logo">
+            <div class="nav-logo-icon"><img src="image.png" alt="" style=""></div>
+            <div class="nav-logo-text">
+                <span>Sankranthi Sambaraalu</span>
+                <span>Konaseema Pongal Village Tour</span>
+            </div>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#why">Why Konaseema</a>
+            <a href="#itinerary">Itinerary</a>
+            <a href="#packages">Packages</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact" class="btn-outline">Contact</a>
+        </nav>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <main id="home">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-left">
+                <div class="hero-pill">
+                    🪁 Only for Sankranthi & Pongal • Limited village batches
+                </div>
+                <h1 class="hero-title">
+                    Celebrate <span class="highlight">Sankranthi</span> in the
+                    heart of <span class="highlight">Konaseema</span> 🌾
+                </h1>
+                <p class="hero-subtitle">
+                    Leave the city cubicles behind and spend Pongal amidst coconut farms, traditional
+                    games, village houses and authentic Andhra food – specially curated for
+                    employees & corporate teams.
+                </p>
+
+                <div class="hero-meta">
+                    <div class="hero-meta-item">🌴 Konaseema village trails</div>
+                    <div class="hero-meta-item">🔥 Bhogi & Sankranthi rituals</div>
+                    <div class="hero-meta-item">🍽️ Home-style veg & non-veg feast</div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#packages" class="btn-primary">
+                        View Pongal Packages
+                        <span>↓</span>
+                    </a>
+                    <a href="https://wa.me/7382752077?text=Hi%2C%20I%20want%20details%20of%20Sankranthi%20Sambaraalu%20Konaseema%20tour." target="_blank" class="btn-outline">
+                        Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+           <div class="hero-right">
+    <div class="hero-card">
+        <div class="hero-card-header">
+            <div>
+                <div class="hero-card-title">3 Days / 4 Nights Pongal Tour</div>
+                <small>Konaseema Village Experience for Groups & Families</small>
+            </div>
+            <div class="hero-pot">
+                <div class="hero-steam">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-card-body">
+            <div class="hero-card-tags">
+                <span class="hero-card-tag">Kodipandalu Experience</span>
+                <span class="hero-card-tag">Pongal Pot Ritual</span>
+                <span class="hero-card-tag">Coconut & Paddy Fields</span>
+            </div>
+            <p>
+                Enjoy Konaseema like never before—village festivals, bullock cart rides, 
+                muggulu, kite flying, boat rides and authentic Pongal celebrations 
+                across Ravulapalem, Kothapeta, Atreyapuram & more.
+            </p>
+        </div>
+
+        <div class="hero-card-footer">
+            <div>
+                From <strong>₹5,000 – ₹7,000 per person</strong>
+                <div>Group package: ₹25,000 (5 members)</div>
+            </div>
+            <div>
+                <div>📍 Konaseema, Andhra Pradesh</div>
+                <div>🗓️ 3 Days • 4 Nights • Bhogi to Kanuma</div>
+            </div>
+        </div>
+
+        <div class="floating-kite"></div>
+    </div>
+</div>
+
+        </section>
+
+        <!-- Why Konaseema -->
+       <section id="why">
+    <div class="section-inner">
+        <div class="section-heading">
+            <h2>Why Konaseema for Pongal? 🌴</h2>
+            <p>
+                Konaseema is the heart of Andhra’s Sankranthi celebrations — coconut farms, river canals,
+                rural festivals, Kodipandalu, muggulu, and true Pongal culture you cannot experience in cities.
+            </p>
+        </div>
+
+        <div class="grid-why">
+
+            <div class="why-card">
+                <div class="why-label-chip">Nature</div>
+                <div class="why-icon">🌾</div>
+                <h3>Green Coconut Belt & River Canals</h3>
+                <p>
+                    Experience breathtaking coconut farms, Godavari canal routes, village bridges, and peaceful 
+                    paddy fields — perfect for photos, relaxing walks and Pongal vibes.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-label-chip">Festival</div>
+                <div class="why-icon">🔥</div>
+                <h3>Real Sankranthi Traditions</h3>
+                <p>
+                    Bhogi mantalu, Pongal pot rituals, Haridasu visits, muggulu competitions and 
+                    village-style celebrations that bring the festival alive.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-label-chip">Village Life</div>
+                <div class="why-icon">🐓</div>
+                <h3>Kodipandalu & Rural Programs</h3>
+                <p>
+                    Witness or participate in Konaseema’s famous Kodipandalu events, bullock cart rides,
+                    Kothapeta & Ravulapalem cultural programs and authentic village gatherings.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <div class="why-label-chip">Activities</div>
+                <div class="why-icon">🪁</div>
+                <h3>Kites, Games & Local Fun</h3>
+                <p>
+                    Kite flying, uri adiviyadam, kabaddi, gillidanda, coconut plucking demos, boat rides 
+                    and more activities designed for groups & families.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+        <!-- Itinerary -->
+        <section id="itinerary">
+            <div class="section-inner">
+                <div class="section-heading">
+                    <h2>One-Day Sankranthi Village Plan 🗓️</h2>
+                    <p>
+                        Designed specially for employees travelling from city to Konaseema villages
+                        for a full day Pongal experience.
+                    </p>
+                </div>
+
+                <div class="itinerary-grid">
+                    <div class="itinerary-card">
+                        <div class="itinerary-badge">
+                            🔔 Sample itinerary – can be customized for your team
+                        </div>
+                        <ul class="itinerary-steps">
+                            <li>
+                                <div class="itinerary-step-time">06:00 AM</div>
+                                <div class="itinerary-step-body">
+                                    <span>Start from City</span>
+                                    <small>Pickup from common point / office (optional transport add-on available).</small>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="itinerary-step-time">09:00 AM</div>
+                                <div class="itinerary-step-body">
+                                    <span>Village Welcome & Breakfast</span>
+                                    <small>Traditional welcome, tea & tiffin at a Konaseema village house.</small>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="itinerary-step-time">10:30 AM</div>
+                                <div class="itinerary-step-body">
+                                    <span>Pongal Rituals & Farm Walk</span>
+                                    <small>Pongal pot, rangoli, photo session and coconut/paddy farm walk.</small>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="itinerary-step-time">01:00 PM</div>
+                                <div class="itinerary-step-body">
+                                    <span>Festive Lunch</span>
+                                    <small>Authentic Andhra Sankranthi meals with sweets, snacks and village specials.</small>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="itinerary-step-time">03:00 PM</div>
+                                <div class="itinerary-step-body">
+                                    <span>Games & Village Activities</span>
+                                    <small>Kabaddi, gillidanda, uri adiviyadam, kite flying and bullock cart ride.</small>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="itinerary-step-time">05:30 PM</div>
+                                <div class="itinerary-step-body">
+                                    <span>Evening Tea & Local Snacks</span>
+                                    <small>Relax by the fields, canal side photo walk and light snacks.</small>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="itinerary-step-time">07:00 PM</div>
+                                <div class="itinerary-step-body">
+                                    <span>Return to City</span>
+                                    <small>Head back with full hearts and full gallery 📸</small>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="itinerary-note">
+                            Timings & activities may shift slightly based on your starting city, batch size
+                            and Pongal date (Bhogi / Sankranthi / Kanuma).
+                        </div>
+                    </div>
+
+                    <div class="itinerary-highlight">
+    <strong>For Groups, Families & Corporate Teams 👨‍👩‍👧‍👦🎉</strong>
+
+    <p style="margin-top: 0.35rem;">
+        We also provide special customization for 3 Days / 4 Nights Sankranthi Sambaraalu tours:
+    </p>
+
+    <ul style="font-size: 0.82rem; margin-top: 0.3rem; padding-left: 1rem;">
+        <li>Kodipandalu (Village festival arrangements)</li>
+        <li>Pongal pot setup & muggulu (rangoli) competition</li>
+        <li>Exclusive bullock cart rides for your group</li>
+        <li>Team-friendly games: uri adiviyadam, kite flying, kabaddi</li>
+        <li>Transport help from Ravulapalem / Rajahmundry</li>
+        <li>Custom itinerary based on batch size & preferences</li>
+        <li>Pongal hampers (sugarcane, jaggery, turmeric – optional)</li>
+        <li>Special programs at Kothapeta / Ravulapalem villages</li>
+    </ul>
+
+    <p style="margin-top: 0.4rem;">
+        <strong>Best for:</strong> Employee groups, families, friends, alumni batches, 
+        small teams and festival lovers who want the true Konaseema Pongal experience.
+    </p>
+
+    <a href="https://wa.me/7382752077?text=Hi%2C%20we%20want%20to%20customize%20our%203D4N%20Sankranthi%20Sambaraalu%20Konaseema%20trip." 
+       target="_blank" class="btn-primary" style="margin-top: 0.7rem;">
+        Talk to us on WhatsApp
+    </a>
+</div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Packages -->
+        <section id="packages">
+    <div class="section-inner">
+        <div class="section-heading">
+            <h2>Pongal Special Packages 🎉</h2>
+            <p>
+                Choose your Sankranthi Sambaraalu plan. All packages include sightseeing in
+                Konaseema, cultural activities and festive vibes.
+            </p>
+        </div>
+
+        <div class="packages-grid">
+
+            <!-- Package 1 -->
+            <div class="package-card">
+                <div class="package-badge">Most Booked</div>
+                <div class="package-title">Full Package (Food + Stay)</div>
+                <div class="package-meta">Perfect for families, friends & employees</div>
+
+                <div class="package-price">
+                    ₹7,000 / person
+                    <span>(3 Days • 4 Nights)</span>
+                </div>
+
+                <ul class="package-list">
+                    <li>Stay + Food (Veg & Non-Veg)</li>
+                    <li>Pickup & Drop: Ravulapalem / Rajahmundry</li>
+                    <li>Atreyapuram Boat Rides</li>
+                    <li>Kodipandalu</li>
+                    <li>Vadapalli Venkateswara Swamy Temple</li>
+                    <li>Ravulapalem Kodipandalu</li>
+                    <li>Jaganthotha Prabla Thretham</li>
+                    <li>Kothapeta Cultural Programs</li>
+                    <li>Kotipalli & nearby locations</li>
+                </ul>
+
+                <div class="package-footer">
+                    <div>All inclusions covered</div>
+                    <a href="https://wa.me/7382752077?text=I%20want%20details%20of%207000%20INR%20Food%20%2B%20Stay%20package" 
+                       class="btn-primary btn-package" target="_blank">
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="package-card">
+                <div class="package-badge">Budget</div>
+                <div class="package-title">Stay Only Package</div>
+                <div class="package-meta">Good for solo travellers & youth groups</div>
+
+                <div class="package-price">
+                    ₹5,000 / person
+                    <span>(3 Days • 4 Nights)</span>
+                </div>
+
+                <ul class="package-list">
+                    <li>Stay Included</li>
+                    <li>Pickup & Drop: Ravulapalem / Rajahmundry</li>
+                    <li>Atreyapuram Boat Rides</li>
+                    <li>Kodipandalu</li>
+                    <li>Vadapalli Venkateswara Swamy Temple</li>
+                    <li>Ravulapalem Kodipandalu</li>
+                    <li>Jaganthotha Prabla Thretham</li>
+                    <li>Kothapeta Cultural Programs</li>
+                    
+                </ul>
+
+                <div class="package-footer">
+                    <div>Food not included</div>
+                    <a href="https://wa.me/7382752077?text=I%20want%20details%20of%205000%20INR%20Stay%20Only%20package" 
+                       class="btn-primary btn-package" target="_blank">
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="package-card">
+                <div class="package-badge">Group Offer</div>
+                <div class="package-title">Small Group Package (5 Members)</div>
+                <div class="package-meta">Best for teams, friends or family</div>
+
+                <div class="package-price">
+                    ₹25,000 / batch
+                    <span>(Up to 5 persons • 3 Days • 4 Nights)</span>
+                </div>
+
+                <ul class="package-list">
+                    <li>Stay + Food Included for all 5 people</li>
+                    <li>Pickup & Drop: Ravulapalem / Rajahmundry</li>
+                    <li>Atreyapuram Boat Rides</li>
+                    <li>Kodipandalu</li>
+                    <li>Vadapalli Venkateswara Swamy Temple</li>
+                    <li>Ravulapalem Kodipandalu</li>
+                    <li>Jaganthotha Prabla Thretham</li>
+                    <li>Kothapeta Cultural Events</li>
+                    <li>Kotipalli & full sightseeing</li>
+                </ul>
+
+                <div class="package-footer">
+                    <div>Special discount for small groups</div>
+                    <a href="https://wa.me/7382752077?text=I%20want%20details%20of%2025000%20INR%20Group%20Package%20for%205%20members" 
+                       class="btn-primary btn-package" target="_blank">
+                        Book on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+        <!-- Gallery -->
+<section id="gallery">
+    <div class="section-inner">
+        <div class="section-heading">
+            <h2>Konaseema Pongal Vibes 📸</h2>
+            <p>
+                A glimpse of the real Sankranthi Sambaraalu – coconut farms, Kodipandalu atmosphere,
+                Pongal rituals, village fields, bullock carts and canal rides.
+            </p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <!-- Coconut Farms -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1749026314459-3fb459710f01?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fENvY29udXQlMjBGYXJtc3xlbnwwfHwwfHx8MA%3D%3D" alt="Coconut farms">
+                <!-- <span class="gallery-label">Coconut Farms</span> -->
+            </div>
+
+            <!-- Pongal Pot -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1732603891196-2b8cc24f39a5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UG9uZ2FsJTIwUG90JTIwUml0dWFsfGVufDB8fDB8fHww" alt="Pongal pot ritual">
+                <!-- <span class="gallery-label">Pongal Pot Ritual</span> -->
+            </div>
+
+            <!-- Village Games -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1755275729195-131bd09ffad1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGNvY2tzfGVufDB8fDB8fHww" alt="Village games">
+                <!-- <span class="gallery-label">Village Games</span> -->
+            </div>
+
+            <!-- Canal Ride -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1706631519116-6607d09107b2?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "alt="Village games">
+                               <!-- <span class="gallery-label">Canal Side Boat Ride</span> -->
+            </div>
+
+            <!-- Traditional Houses -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1759738103259-f2f9bb73a9d9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Traditional village houses">
+                <!-- <span class="gallery-label">Traditional Houses</span> -->
+            </div>
+
+            <!-- Festive Meals -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1742281257687-092746ad6021?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8RmVzdGl2ZSUyME1lYWxzJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D" alt="Festive meals">
+                <!-- <span class="gallery-label">Festive Meals</span> -->
+            </div>
+
+            <!-- Kite Flying -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1489011397388-494518edf378?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2l0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="Kite flying">
+                <!-- <span class="gallery-label">Kite Flying</span> -->
+            </div>
+
+            <!-- Sunset Fields -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1668398424217-18a8cade91f7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fFN1bnNldCUyMGluJTIwRmllbGRzJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D" alt="Sunset fields">
+                <!-- <span class="gallery-label">Sunset in Fields</span> -->
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+        <!-- FAQ -->
+       <section id="faq">
+    <div class="section-inner">
+        <div class="section-heading">
+            <h2>Frequently Asked Questions ❓</h2>
+            <p>
+                Here are the most common questions about the 3 Days / 4 Nights
+                Sankranthi Sambaraalu – Konaseema Pongal Tour.
+            </p>
+        </div>
+
+        <div class="faq-grid">
+
+            <div class="faq-intro">
+                <p>
+                    Still confused? Just message “Hi” on WhatsApp — we will guide you with timings,
+                    pricing, group suggestions and best plans for your family or team.
+                </p>
+                <p style="margin-top: 0.5rem;">
+                    👉 Bring comfortable clothes, a power bank, and festive vibes — we handle the rest!
+                </p>
+            </div>
+
+            <div>
+
+                <!-- FAQ 1 -->
+                <details>
+                    <summary><span>Where does the pickup happen?</span></summary>
+                    <div class="answer">
+                        Pickup & drop are available from:
+                        <br><br>
+                        ✔ Ravulapalem  
+                        ✔ Rajahmundry  
+                        <br><br>
+                        Once your slot is confirmed, we will share exact pickup points & timings.
+                    </div>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details>
+                    <summary><span>What does the 3 Days / 4 Nights tour include?</span></summary>
+                    <div class="answer">
+                        The tour includes sightseeing, activities, village experiences,
+                        Kodipandalu atmosphere, Pongal rituals, cultural programs and more.
+                        <br><br>
+                        ✓ Pongal pot ritual & muggulu  
+                        ✓ Bullock cart ride  
+                        ✓ Village games (uri adiviyadam, kite flying etc.)  
+                        ✓ Coconut & paddy field walk  
+                        ✓ Boat ride (Atreyapuram area)  
+                        ✓ Visits to Ravulapalem, Kothapeta, Kotipalli & more  
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details>
+                    <summary><span>Is food included?</span></summary>
+                    <div class="answer">
+                        ✔ ₹7000 package → Stay + Food + All activities  
+                        ✔ ₹5000 package → Stay + Activities (Food not included)  
+                        ✔ ₹25000 group package → Stay + Food + All activities for 5 members  
+                    </div>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details>
+                    <summary><span>Is it safe for kids and women?</span></summary>
+                    <div class="answer">
+                        Yes! Konaseema villages are peaceful and family–friendly.  
+                        Kids love the farms, kites, and animal activities.  
+                        Women-friendly arrangements, safe night stays and coordinators are present.
+                    </div>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details>
+                    <summary><span>What type of stay is provided?</span></summary>
+                    <div class="answer">
+                        We provide clean village-based stays / homestays with:
+                        <br><br>
+                        ✔ Separate rooms for families  
+                        ✔ Basic amenities like water, fans, washrooms  
+                        ✔ Safe & comfortable arrangements  
+                        <br><br>
+                        Luxury stay upgrades can be requested (limited availability).
+                    </div>
+                </details>
+
+                <!-- FAQ 6 -->
+                <details>
+                    <summary><span>Is Kodipandalu included?</span></summary>
+                    <div class="answer">
+                        Yes! You will experience real Konaseema village vibes during Sankranthi,
+                        including local festival zones, cultural shows and Kodipandalu atmosphere
+                        in Ravulapalem & nearby villages.
+                    </div>
+                </details>
+
+                <!-- FAQ 7 -->
+                <details>
+                    <summary><span>How do I book my slot?</span></summary>
+                    <div class="answer">
+                        Send us on WhatsApp:
+                        <br><br>
+                        ✔ Number of people  
+                        ✔ Preferred date (Bhogi / Sankranthi / Kanuma)  
+                        ✔ Pickup location (Ravulapalem / Rajahmundry)  
+                        <br><br>
+                        We will share availability, pricing and payment link.
+                    </div>
+                </details>
+
+                <!-- FAQ 8 -->
+                <details>
+                    <summary><span>What should I bring?</span></summary>
+                    <div class="answer">
+                        Recommended:
+                        <br><br>
+                        • Comfortable traditional wear  
+                        • Extra pair of clothes  
+                        • Power bank  
+                        • Sunglasses / cap  
+                        • Personal medicines  
+                        • A big smile for Pongal photos 😉  
+                    </div>
+                </details>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+        <!-- Contact -->
+        <section id="contact" class="contact-section">
+    <div class="section-inner">
+        <div class="section-heading">
+            <h2>Book Your Sankranthi Sambaraalu 🌾</h2>
+            <p>
+                Pongal comes once a year — accommodation & village slots fill very fast.
+                Share your group details on WhatsApp and we will guide you with availability.
+            </p>
+        </div>
+
+        <div class="contact-wrap">
+
+            <!-- Left section -->
+            <div>
+                <div class="contact-chip">
+                    🧡 Konaseema Pongal Tour Support
+                </div>
+
+                <h3>Tell us about your group</h3>
+                <p>Send us these details on WhatsApp:</p>
+
+                <ul style="font-size: 0.84rem; margin-top: 0.4rem; padding-left: 1rem; color: var(--text-muted);">
+                    <li>Number of people (family / friends / team)</li>
+                    <li>Preferred dates (Bhogi / Sankranthi / Kanuma)</li>
+                    <li>Pickup point (Ravulapalem / Rajahmundry)</li>
+                    <li>Package type (₹5000 / ₹7000 / Group ₹25000)</li>
+                    <li>Any special requirements (food / stay / activities)</li>
+                </ul>
+
+                <a href="https://wa.me/7382752077?text=Hi%2C%20I%20want%20to%20book%20the%203D4N%20Sankranthi%20Sambaraalu%20tour.%20Here%20are%20my%20group%20details%3A" 
+                   class="btn-primary" style="margin-top: 0.7rem;" target="_blank">
+                    Open WhatsApp &amp; Book Now
+                </a>
+            </div>
+
+            <!-- Right section -->
+            <div>
+                <div class="contact-items">
+                    <div>📍 Location: Konaseema villages (Ravulapalem • Kothapeta • Atreyapuram • Kotipalli)</div>
+                    <div>🗓️ Duration: 3 Days / 4 Nights (Bhogi → Kanuma)</div>
+                    <div>🚐 Pickup Points: Ravulapalem & Rajahmundry</div>
+                    <div>👥 Best for: Families, friends, employees, small groups & Pongal travellers</div>
+                    <div>💬 Languages: Telugu & English support available</div>
+                </div>
+
+                <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.7rem;">
+                    Note: We share the exact stay location, village route & timing details after confirmation.
+                    Kodipandalu and cultural programs vary by village & festival dates.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+        <footer class="footer">
+            © <span id="year"></span> Sankranthi Sambaraalu – Konaseema Pongal Village Experience.
+            All festival, no stress ✨
+        </footer>
+    </main>
+
+    <script>
+        // Mobile nav toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+        }
+
+        // Close nav when clicking link on mobile
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+            });
+        });
+
+        // Current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
